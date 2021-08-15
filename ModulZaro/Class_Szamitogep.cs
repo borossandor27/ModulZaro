@@ -6,32 +6,33 @@ using System.Threading.Tasks;
 
 namespace ModulZaro
 {
-    class Szamitogep
+    class Class_Szamitogep : Arkalkulator
     {
         readonly string konfig;
         Oprendszer oprendszer;
         string tulajdonos;
         bool gamer;
-        List<Alkatresz> alkatreszek = new List<Alkatresz>();
+        List<Class_Alkatresz> alkatreszek = new List<Class_Alkatresz>();
 
         public string Konfig => konfig;
 
         public string Tulajdonos { get => tulajdonos; set => tulajdonos = value; }
         public bool Gamer { get => gamer; set => gamer = value; }
         internal Oprendszer Oprendszer { get => oprendszer; set => oprendszer = value; }
-        internal List<Alkatresz> Alkatreszek { get => alkatreszek; set => alkatreszek = value; }
+        internal List<Class_Alkatresz> Alkatreszek { get => alkatreszek; set => alkatreszek = value; }
 
-        public Szamitogep(string konfig, string tulajdonos, bool gamer, Oprendszer oprendszer, List<Alkatresz> alkatreszek)
+        public Class_Szamitogep(string konfig, string tulajdonos, bool gamer, Oprendszer oprendszer, List<Class_Alkatresz> alkatreszek)
         {
-            this.konfig = konfig;
-            Tulajdonos = tulajdonos;
+            this.konfig = konfig ?? throw new ArgumentNullException(nameof(konfig));
+            Tulajdonos = tulajdonos ?? throw new ArgumentNullException(nameof(tulajdonos));
             Gamer = gamer;
             Oprendszer = oprendszer;
-            Alkatreszek = alkatreszek;
+            Alkatreszek = alkatreszek ?? throw new ArgumentNullException(nameof(alkatreszek));
         }
 
-        public Szamitogep(string konfig, Oprendszer oprendszer, string tulajdonos, bool gamer)
+        public Class_Szamitogep(string konfig, Oprendszer oprendszer, string tulajdonos, bool gamer)
         {
+            //-- adatok a csv fájlból ----------------
             this.konfig = konfig;
             Oprendszer = oprendszer;
             Tulajdonos = tulajdonos;

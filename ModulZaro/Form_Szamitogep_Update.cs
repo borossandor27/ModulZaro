@@ -20,12 +20,12 @@ namespace ModulZaro
         private void Form_Szamitogep_Load(object sender, EventArgs e)
         {
             comboBox_OperaciosRendszer.SelectedIndex = 0;
-            Szamitogep szg = Program.szamitogepek[Program.Kivalasztott_szgep_index];
+            Class_Szamitogep szg = (Class_Szamitogep)Program.form_nyito.listBox_Szamitogepek.SelectedItem;
             textBox_Konfig.Text = szg.Konfig;
             comboBox_OperaciosRendszer.SelectedIndex = (int)szg.Oprendszer;
             textBox_Tulajdonos.Text = szg.Tulajdonos;
             checkBox_Gamer.Checked = szg.Gamer;
-            foreach (Alkatresz item in szg.Alkatreszek)
+            foreach (Class_Alkatresz item in szg.Alkatreszek)
             {
                 listBox_Alkatreszek.Items.Add(item);
             }
@@ -34,10 +34,12 @@ namespace ModulZaro
 
         private void button_Update_Click(object sender, EventArgs e)
         {
-            Program.szamitogepek[Program.Kivalasztott_szgep_index].Oprendszer = (Oprendszer) comboBox_OperaciosRendszer.SelectedIndex;
-            Program.szamitogepek[Program.Kivalasztott_szgep_index].Tulajdonos = textBox_Tulajdonos.Text;
-            Program.szamitogepek[Program.Kivalasztott_szgep_index].Gamer = checkBox_Gamer.Checked;
-            this.Close();
+        }
+
+        private void button_Alkatreszek_Click(object sender, EventArgs e)
+        {
+            Form_Alkatresz form_Alkatresz = new Form_Alkatresz("new");
+            form_Alkatresz.Show();
         }
     }
 }

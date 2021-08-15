@@ -29,6 +29,7 @@ namespace ModulZaro
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Szamitogep_Update));
             this.label6 = new System.Windows.Forms.Label();
             this.textBox_Ar = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -173,6 +174,7 @@ namespace ModulZaro
             this.button_Alkatreszek.TabIndex = 38;
             this.button_Alkatreszek.Text = "Alkatrészek szerkesztése";
             this.button_Alkatreszek.UseVisualStyleBackColor = true;
+            this.button_Alkatreszek.Click += new System.EventHandler(this.button_Alkatreszek_Click);
             // 
             // comboBox_OperaciosRendszer
             // 
@@ -206,6 +208,7 @@ namespace ModulZaro
             this.Controls.Add(this.textBox_Tulajdonos);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox_Konfig);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Szamitogep_Update";
             this.Text = "Kiválasztott számítógép adatai";
             this.Load += new System.EventHandler(this.Form_Szamitogep_Load);
