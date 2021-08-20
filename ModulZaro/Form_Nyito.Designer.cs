@@ -85,21 +85,21 @@ namespace ModulZaro
             // újToolStripMenuItem
             // 
             this.újToolStripMenuItem.Name = "újToolStripMenuItem";
-            this.újToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.újToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.újToolStripMenuItem.Text = "Új...";
             this.újToolStripMenuItem.Click += new System.EventHandler(this.újToolStripMenuItem_Click);
             // 
             // módosításToolStripMenuItem
             // 
             this.módosításToolStripMenuItem.Name = "módosításToolStripMenuItem";
-            this.módosításToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.módosításToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.módosításToolStripMenuItem.Text = "Módosítás...";
             this.módosításToolStripMenuItem.Click += new System.EventHandler(this.módosításToolStripMenuItem_Click);
             // 
             // törlésToolStripMenuItem
             // 
             this.törlésToolStripMenuItem.Name = "törlésToolStripMenuItem";
-            this.törlésToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.törlésToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.törlésToolStripMenuItem.Text = "Törlés";
             this.törlésToolStripMenuItem.Click += new System.EventHandler(this.törlésToolStripMenuItem_Click);
             // 
@@ -122,10 +122,13 @@ namespace ModulZaro
             // 
             // textBox_Tulajdonos
             // 
+            this.textBox_Tulajdonos.ForeColor = System.Drawing.SystemColors.GrayText;
             this.textBox_Tulajdonos.Location = new System.Drawing.Point(128, 89);
             this.textBox_Tulajdonos.Name = "textBox_Tulajdonos";
+            this.textBox_Tulajdonos.ReadOnly = true;
             this.textBox_Tulajdonos.Size = new System.Drawing.Size(150, 20);
             this.textBox_Tulajdonos.TabIndex = 8;
+            this.textBox_Tulajdonos.TabStop = false;
             // 
             // label3
             // 
@@ -139,6 +142,7 @@ namespace ModulZaro
             // checkBox_Gamer
             // 
             this.checkBox_Gamer.AutoSize = true;
+            this.checkBox_Gamer.Enabled = false;
             this.checkBox_Gamer.Location = new System.Drawing.Point(146, 120);
             this.checkBox_Gamer.Name = "checkBox_Gamer";
             this.checkBox_Gamer.Size = new System.Drawing.Size(118, 17);
@@ -157,11 +161,14 @@ namespace ModulZaro
             // 
             // listBox_Alkatreszek
             // 
+            this.listBox_Alkatreszek.ForeColor = System.Drawing.SystemColors.GrayText;
             this.listBox_Alkatreszek.FormattingEnabled = true;
             this.listBox_Alkatreszek.Location = new System.Drawing.Point(128, 151);
             this.listBox_Alkatreszek.Name = "listBox_Alkatreszek";
             this.listBox_Alkatreszek.Size = new System.Drawing.Size(150, 147);
+            this.listBox_Alkatreszek.Sorted = true;
             this.listBox_Alkatreszek.TabIndex = 10;
+            this.listBox_Alkatreszek.TabStop = false;
             // 
             // label1
             // 
@@ -183,10 +190,13 @@ namespace ModulZaro
             // 
             // textBox_Ar
             // 
+            this.textBox_Ar.ForeColor = System.Drawing.SystemColors.GrayText;
             this.textBox_Ar.Location = new System.Drawing.Point(128, 309);
             this.textBox_Ar.Name = "textBox_Ar";
+            this.textBox_Ar.ReadOnly = true;
             this.textBox_Ar.Size = new System.Drawing.Size(150, 20);
             this.textBox_Ar.TabIndex = 12;
+            this.textBox_Ar.TabStop = false;
             this.textBox_Ar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label6
@@ -223,11 +233,13 @@ namespace ModulZaro
             // 
             // comboBox_Oprendszer
             // 
+            this.comboBox_Oprendszer.Enabled = false;
             this.comboBox_Oprendszer.FormattingEnabled = true;
             this.comboBox_Oprendszer.Location = new System.Drawing.Point(128, 58);
             this.comboBox_Oprendszer.Name = "comboBox_Oprendszer";
             this.comboBox_Oprendszer.Size = new System.Drawing.Size(150, 21);
             this.comboBox_Oprendszer.TabIndex = 14;
+            this.comboBox_Oprendszer.TabStop = false;
             // 
             // Form_Nyito
             // 

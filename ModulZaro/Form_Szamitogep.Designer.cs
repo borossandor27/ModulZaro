@@ -46,6 +46,7 @@ namespace ModulZaro
             this.button_Alkatresz_remove = new System.Windows.Forms.Button();
             this.listBox_Alkatreszek = new System.Windows.Forms.ListBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.buttonalkatresz_update = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Ar)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -124,12 +125,13 @@ namespace ModulZaro
             // 
             this.button_Muvelet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button_Muvelet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button_Muvelet.Location = new System.Drawing.Point(22, 407);
+            this.button_Muvelet.Location = new System.Drawing.Point(20, 423);
             this.button_Muvelet.Name = "button_Muvelet";
             this.button_Muvelet.Size = new System.Drawing.Size(353, 26);
             this.button_Muvelet.TabIndex = 38;
             this.button_Muvelet.Text = "Új számítógép konfiguráció rögzítése";
             this.button_Muvelet.UseVisualStyleBackColor = false;
+            this.button_Muvelet.Click += new System.EventHandler(this.button_Muvelet_Click);
             // 
             // comboBox_OperaciosRendszer
             // 
@@ -169,12 +171,13 @@ namespace ModulZaro
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button_New_alkatresz);
+            this.groupBox1.Controls.Add(this.buttonalkatresz_update);
             this.groupBox1.Controls.Add(this.button_Alkatresz_remove);
             this.groupBox1.Controls.Add(this.listBox_Alkatreszek);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Location = new System.Drawing.Point(22, 181);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(363, 204);
+            this.groupBox1.Size = new System.Drawing.Size(363, 236);
             this.groupBox1.TabIndex = 41;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "A konfiguráció elemei";
@@ -218,11 +221,22 @@ namespace ModulZaro
             this.label5.TabIndex = 45;
             this.label5.Text = "Alkatrészei";
             // 
+            // buttonalkatresz_update
+            // 
+            this.buttonalkatresz_update.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.buttonalkatresz_update.Location = new System.Drawing.Point(19, 194);
+            this.buttonalkatresz_update.Name = "buttonalkatresz_update";
+            this.buttonalkatresz_update.Size = new System.Drawing.Size(331, 26);
+            this.buttonalkatresz_update.TabIndex = 48;
+            this.buttonalkatresz_update.Text = "Alkatrész darabszámának a módosítása";
+            this.buttonalkatresz_update.UseVisualStyleBackColor = true;
+            this.buttonalkatresz_update.Click += new System.EventHandler(this.buttonalkatresz_update_Click);
+            // 
             // Form_Szamitogep
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(408, 441);
+            this.ClientSize = new System.Drawing.Size(408, 455);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.numericUpDown_Ar);
             this.Controls.Add(this.comboBox_OperaciosRendszer);
@@ -253,10 +267,10 @@ namespace ModulZaro
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox checkBox_Gamer;
+        public System.Windows.Forms.CheckBox checkBox_Gamer;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox_Tulajdonos;
-        private System.Windows.Forms.TextBox textBox_Konfig;
+        public System.Windows.Forms.TextBox textBox_Tulajdonos;
+        public System.Windows.Forms.TextBox textBox_Konfig;
         private System.Windows.Forms.Button button_Muvelet;
         private System.Windows.Forms.ComboBox comboBox_OperaciosRendszer;
         private System.Windows.Forms.NumericUpDown numericUpDown_Ar;
@@ -265,5 +279,6 @@ namespace ModulZaro
         private System.Windows.Forms.Button button_Alkatresz_remove;
         public System.Windows.Forms.ListBox listBox_Alkatreszek;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button buttonalkatresz_update;
     }
 }

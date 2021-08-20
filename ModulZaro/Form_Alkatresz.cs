@@ -48,6 +48,22 @@ namespace ModulZaro
         {
             this.BackColor = Color.FromArgb(255, 235, 156);
             this.ForeColor = Color.FromArgb(156, 87, 0);
+            this.Text = "Alkatrész darabszámának a módosítása";
+            button_new.Text = "Alkatrész darabszámának a módosítása";
+            textBox_konfiguracio.Text = Program.form_Szamitogep.textBox_Konfig.Text;
+            Class_Alkatresz alkatresz = (Class_Alkatresz)Program.form_Szamitogep.listBox_Alkatreszek.SelectedItem;
+            textBox_konfiguracio.TabStop = true;
+            textBox_konfiguracio.ReadOnly = true;
+            textBox_Gyarto.Text = alkatresz.Gyarto;
+            textBox_Gyarto.TabStop = true;
+            textBox_Gyarto.ReadOnly = true;
+            textBox_Megnevezes.Text = alkatresz.Megnevezes;
+            textBox_Megnevezes.ReadOnly = true;
+            textBox_Megnevezes.TabStop = true;
+            numericUpDown_Ar.Value = alkatresz.Ar;
+            numericUpDown_Ar.Enabled = false;
+            numericUpDown_Darab.Value = alkatresz.Darab;
+            groupBox1.Visible = false;
         }
 
         private void alkatresz_new()

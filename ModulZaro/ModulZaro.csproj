@@ -101,7 +101,7 @@
     <None Include="alkatreszek.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Modulzaro202101.pdf" />
+    <None Include="Modulzaro_szamitogepek.pdf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
