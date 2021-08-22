@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ModulZaro
 {
-    class Class_Alkatresz
+    class Class_Alkatresz 
     {
         readonly string megnevezes;
         readonly string gyarto;
@@ -46,6 +46,19 @@ namespace ModulZaro
         public override string ToString()
         {
             return $"{megnevezes} ({gyarto}, {ar.ToString("# ##0")} Ft)";
+        }
+
+        public override bool Equals(object obj)
+        {
+            if ((obj == null) || !this.GetType().Equals(obj.GetType()))
+            {
+                return false;
+            }
+            else
+            {
+                Class_Alkatresz other = (Class_Alkatresz)obj;
+                return this.gyarto.Equals(other.gyarto) && this.megnevezes.Equals(other.megnevezes) && this.ar == other.ar;
+            }
         }
     }
 }

@@ -43,10 +43,10 @@ namespace ModulZaro
             this.numericUpDown_Ar = new System.Windows.Forms.NumericUpDown();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button_New_alkatresz = new System.Windows.Forms.Button();
+            this.buttonalkatresz_update = new System.Windows.Forms.Button();
             this.button_Alkatresz_remove = new System.Windows.Forms.Button();
             this.listBox_Alkatreszek = new System.Windows.Forms.ListBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.buttonalkatresz_update = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Ar)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -193,6 +193,17 @@ namespace ModulZaro
             this.button_New_alkatresz.UseVisualStyleBackColor = true;
             this.button_New_alkatresz.Click += new System.EventHandler(this.button_New_alkatresz_Click);
             // 
+            // buttonalkatresz_update
+            // 
+            this.buttonalkatresz_update.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.buttonalkatresz_update.Location = new System.Drawing.Point(19, 194);
+            this.buttonalkatresz_update.Name = "buttonalkatresz_update";
+            this.buttonalkatresz_update.Size = new System.Drawing.Size(331, 26);
+            this.buttonalkatresz_update.TabIndex = 48;
+            this.buttonalkatresz_update.Text = "Alkatrész darabszámának a módosítása";
+            this.buttonalkatresz_update.UseVisualStyleBackColor = true;
+            this.buttonalkatresz_update.Click += new System.EventHandler(this.buttonalkatresz_update_Click);
+            // 
             // button_Alkatresz_remove
             // 
             this.button_Alkatresz_remove.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -202,6 +213,7 @@ namespace ModulZaro
             this.button_Alkatresz_remove.TabIndex = 48;
             this.button_Alkatresz_remove.Text = "Alkatrész eltávolítása";
             this.button_Alkatresz_remove.UseVisualStyleBackColor = true;
+            this.button_Alkatresz_remove.Click += new System.EventHandler(this.button_Alkatresz_remove_Click);
             // 
             // listBox_Alkatreszek
             // 
@@ -220,17 +232,6 @@ namespace ModulZaro
             this.label5.Size = new System.Drawing.Size(58, 13);
             this.label5.TabIndex = 45;
             this.label5.Text = "Alkatrészei";
-            // 
-            // buttonalkatresz_update
-            // 
-            this.buttonalkatresz_update.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.buttonalkatresz_update.Location = new System.Drawing.Point(19, 194);
-            this.buttonalkatresz_update.Name = "buttonalkatresz_update";
-            this.buttonalkatresz_update.Size = new System.Drawing.Size(331, 26);
-            this.buttonalkatresz_update.TabIndex = 48;
-            this.buttonalkatresz_update.Text = "Alkatrész darabszámának a módosítása";
-            this.buttonalkatresz_update.UseVisualStyleBackColor = true;
-            this.buttonalkatresz_update.Click += new System.EventHandler(this.buttonalkatresz_update_Click);
             // 
             // Form_Szamitogep
             // 

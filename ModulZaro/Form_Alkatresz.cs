@@ -23,6 +23,7 @@ namespace ModulZaro
         private void Form_Alkatresz_Load(object sender, EventArgs e)
         {
             listbox_update();
+            textBox_konfiguracio.Text = Program.form_Szamitogep.textBox_Konfig.Text;
             switch (muvelet)
             {
                 case "new":
@@ -46,11 +47,14 @@ namespace ModulZaro
 
         private void alkatresz_update()
         {
+            if (Program.form_Szamitogep.listBox_Alkatreszek.SelectedIndex < 0)
+            {
+                return;
+            }
             this.BackColor = Color.FromArgb(255, 235, 156);
             this.ForeColor = Color.FromArgb(156, 87, 0);
             this.Text = "Alkatrész darabszámának a módosítása";
             button_new.Text = "Alkatrész darabszámának a módosítása";
-            textBox_konfiguracio.Text = Program.form_Szamitogep.textBox_Konfig.Text;
             Class_Alkatresz alkatresz = (Class_Alkatresz)Program.form_Szamitogep.listBox_Alkatreszek.SelectedItem;
             textBox_konfiguracio.TabStop = true;
             textBox_konfiguracio.ReadOnly = true;
@@ -139,7 +143,50 @@ namespace ModulZaro
 
         private void button_new_Click(object sender, EventArgs e)
         {
+            //-- adatok ellenőrzése --------------------
+            if (String.IsNullOrEmpty(textBox_konfiguracio.Text))
+            {
+                MessageBox.Show("Adja meg a konfiguráció nevét!");
+                return;
+            }
+            if (String.IsNullOrEmpty(textBox_Gyarto.Text))
+            {
+                MessageBox.Show("Adja meg a gyártó nevét!");
+                return;
+            }
+            if (String.IsNullOrEmpty(textBox_Megnevezes.Text))
+            {
+                MessageBox.Show("Adja meg az alkatrész megnevezését!");
+                return;
+            }
 
+            //-- adatok feldolgozása -------------------
+            Class_Alkatresz uj = new Class_Alkatresz(textBox_Megnevezes.Text, textBox_Gyarto.Text, (int)numericUpDown_Ar.Value, (int)numericUpDown_Darab.Value);
+            int index = Program.form_Szamitogep.listBox_Alkatreszek.SelectedIndex;
+            switch (muvelet)
+            {
+                case "new":
+                    if (Program.form_Szamitogep.listBox_Alkatreszek.Items.Contains(uj))
+                    {
+                        MessageBox.Show("Már rögzítve van ez az alkatrész!");
+                    }
+                    else
+                    {
+                        Program.form_Szamitogep.listBox_Alkatreszek.Items.Add(uj);
+                    }
+                    this.Close();
+                    break;
+                case "update":
+                    Program.form_Szamitogep.listBox_Alkatreszek.Items.RemoveAt(index);
+                    Program.form_Szamitogep.listBox_Alkatreszek.Items.Insert(index, uj);
+                    this.Close();
+                    break;
+                case "delete":
+                    Program.form_Szamitogep.listBox_Alkatreszek.Items.RemoveAt(index);
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

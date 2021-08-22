@@ -28,6 +28,9 @@ namespace ModulZaro
             {
                     comboBox_Oprendszer.Items.Add((Oprendszer)item);
             }
+            textBox_Konfig.BackColor = Color.FromKnownColor(KnownColor.Control);
+            textBox_Tulajdonos.BackColor = Color.FromKnownColor(KnownColor.Control);
+            textBox_Ar.BackColor = Color.FromKnownColor(KnownColor.Control);
         }
  
 

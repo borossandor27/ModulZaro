@@ -129,7 +129,24 @@ namespace ModulZaro
 
         private void szamitogep_update_feldozgoz()
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrEmpty(textBox_Konfig.Text))
+            {
+                MessageBox.Show("Adjon nevet a konfigurációnak!");
+                return;
+            }
+            if (comboBox_OperaciosRendszer.SelectedIndex < 0)
+            {
+                MessageBox.Show("Válasszon operációs rendszert!");
+                return;
+            }
+            if (string.IsNullOrEmpty(textBox_Tulajdonos.Text))
+            {
+                MessageBox.Show("Adja meg a tulajdonos nevét!");
+            }
+
+            int index = Program.form_nyito.listBox_Szamitogepek.SelectedIndex;
+
+            Program.form_nyito.listBox_Szamitogepek.Items.RemoveAt(index);
         }
 
         private void szamitogep_new_feldozgoz()
@@ -155,9 +172,22 @@ namespace ModulZaro
             if (listBox_Alkatreszek.SelectedIndex < 0)
             {
                 MessageBox.Show("Nincs kiválasztott alkatrész!");
+                return;
             }
             Form_Alkatresz form_Alkatresz = new Form_Alkatresz("update");
             form_Alkatresz.ShowDialog();
+        }
+
+        private void button_Alkatresz_remove_Click(object sender, EventArgs e)
+        {
+            if (listBox_Alkatreszek.SelectedIndex<0)
+            {
+                MessageBox.Show("Nincs kiválasztott alkatrész!");
+            }
+            else
+            {
+                listBox_Alkatreszek.Items.RemoveAt(listBox_Alkatreszek.SelectedIndex);
+            }
         }
     }
 }

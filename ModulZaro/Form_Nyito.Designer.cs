@@ -105,6 +105,7 @@ namespace ModulZaro
             // 
             // textBox_Konfig
             // 
+            this.textBox_Konfig.ForeColor = System.Drawing.SystemColors.GrayText;
             this.textBox_Konfig.Location = new System.Drawing.Point(128, 27);
             this.textBox_Konfig.Name = "textBox_Konfig";
             this.textBox_Konfig.ReadOnly = true;
@@ -234,6 +235,7 @@ namespace ModulZaro
             // comboBox_Oprendszer
             // 
             this.comboBox_Oprendszer.Enabled = false;
+            this.comboBox_Oprendszer.ForeColor = System.Drawing.SystemColors.GrayText;
             this.comboBox_Oprendszer.FormattingEnabled = true;
             this.comboBox_Oprendszer.Location = new System.Drawing.Point(128, 58);
             this.comboBox_Oprendszer.Name = "comboBox_Oprendszer";
